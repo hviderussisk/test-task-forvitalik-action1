@@ -1,0 +1,30 @@
+@mixin display-flex($direction, $justify, $align)
+    display: flex
+    flex-direction: $direction
+    justify-content: $justify
+    align-items: $align
+
+@mixin buttonActionDarkenColor($color)
+    &:hover
+        background: darken($color, 10% )
+    &:focus
+        background: darken($color, 10% )
+    &:active
+        background: darken($color, 10% )
+    &:visited
+        background: darken($color, 10% )
+
+@mixin buttonActionDarkenSVG($color)
+    &:hover
+        fill: darken($color, 20% )
+    &:focus
+        fill: darken($color, 20% )
+    &:active
+        fill: darken($color, 20% )
+    &:visited
+        fill: darken($color, 20% )
+
+@mixin response($screen)
+    @media all and (max-width: $screen+"px")
+        @content
+    

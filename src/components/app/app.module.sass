@@ -1,0 +1,24 @@
+@import './../../assets/sass/mixins'
+
+
+.container
+    width: 1000px
+    margin: 0 auto
+    font-family: Arial, Helvetica, sans-serif
+    @include response(1000)
+        width: 100% 
+    .header__table
+        background: #f5f5f5
+        border-radius: 10px
+        @include display-flex(row, center , center )   
+    .result_table
+        background: transparent
+    .column
+        width: 33.3333%
+        font-weight: 600
+        font-size: 16px
+        padding: 10px
+        text-align: center
+        &:nth-child(1)
+            text-align: left
+            

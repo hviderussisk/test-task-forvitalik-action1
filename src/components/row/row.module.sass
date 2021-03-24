@@ -1,0 +1,92 @@
+@import './../../assets/sass/mixins'
+@import './../../assets/sass/anim'
+    
+.row__Container
+    border-radius: 10px
+    outline: none
+    cursor: pointer
+    position: relative
+    font-size: 13px
+    margin-top: 5px
+    animation: fadeInUp linear .2s both
+    @include display-flex(row, center , center )
+    &:hover
+        background: #dcf1ff
+        .panel_button
+            opacity: 1
+    div
+        width: 33.3333%
+        padding: 10px
+        text-align: center
+        &:nth-child(1)
+            text-align: left
+    .panel_button
+        opacity: 0
+        position: absolute
+        right: 0
+        top: 0
+        display: flex
+        width: 80px
+        padding: 0 10px
+        @include response(700)
+            display: none
+        .change
+            fill: #726eff
+            @include buttonActionDarkenSVG(#726eff)
+        .delete
+            fill: #ff5353
+            @include buttonActionDarkenSVG(#ff5353)
+        div
+            width: 15px
+            height: 15px
+    form
+        width: 100%
+        padding: 1px 0px 1px 0px
+        margin: 0
+        font-size: 14px
+        background: #dcf1ff
+        border-radius: 10px
+        .error
+            position: absolute
+            right: 20px
+            font-size: 13px
+            top: 8px
+            width: auto
+            color: red
+            padding: 0
+            animation: bounceInRight linear .5s both
+            background: #fafafa
+            z-index: 2
+        div
+            width: 33.333%
+            position: relative
+            padding: 0px 0px 0px 10px
+            box-sizing: border-box
+            overflow: hidden
+            &:nth-child(1)
+                padding: 0px 0px 0px 0px
+            input
+                box-shadow: none 
+        .back
+            width: 14px
+            height: 14px
+            position: absolute
+            right: 30px
+            top: 10px
+            fill: #ff5353
+            padding: 0
+            @include buttonActionDarkenSVG(#ff5353)
+        .ready
+            width: 15px
+            height: 15px
+            position: absolute
+            right: 64px
+            top: 8px
+            fill: #30ca5e
+            padding: 0
+            margin: 0
+            background: transparent
+            @include buttonActionDarkenSVG(#30ca5e)
+
+
+
